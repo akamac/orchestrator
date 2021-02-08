@@ -1420,7 +1420,7 @@ func ErrantGTIDInjectEmpty(instanceKey *InstanceKey) (instance *Instance, cluste
 		return instance, clusterMaster, countInjectedTransactions, err
 	}
 	if len(masters) == 0 {
-		return instance, clusterMaster, countInjectedTransactions, log.Errorf("gtid-errant-inject-empty found no writabel master for %+v cluster", instance.ClusterName)
+		return instance, clusterMaster, countInjectedTransactions, log.Errorf("gtid-errant-inject-empty found no writable master for %+v cluster", instance.ClusterName)
 	}
 	clusterMaster = masters[0]
 
